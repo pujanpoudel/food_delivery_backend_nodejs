@@ -24,16 +24,11 @@ router.get("/users",(req,res)=>{
     res.render("users");
 })
 
-router.get("/admin_manager",(req,res)=>{
-    res.render("admin_manager");
-})
-
 router.get("/add_food",(req,res)=>{
     res.render("add_food");
 })
 
 router.post("/add_food",(req,res)=>{
-    console.log(req.body)
 res.send(req.body);
 })
 

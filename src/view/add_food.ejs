@@ -6,6 +6,9 @@
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 bg-gray-800 border-b border-gray-200">
                 <form method="POST" action="/admin/add_food">
+
+
+
                     <div class="mb-4">
                         <label class="text-xl text-gray-300">Title <span class="text-red-500">*</span></label></br>
                         <input type="text" class="bg-gray-800 border-gray-300 p-2 w-full " name="title" id="title" required>
@@ -13,14 +16,51 @@
 
                     <div class="mb-4">
                         <label class="text-xl text-gray-300">Price<span class="text-red-500">*</span></label></br>
-                        <input type="text" class="bg-gray-800 border-gray-300 p-2 w-full" name="description" id="description" required>
+                        <input type="text" class="bg-gray-800 border-gray-300 p-2 w-full" name="Price" id="Price" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="text-xl text-gray-300">Description <span class="text-red-500">*</span></label></br>
+                        <textarea name="Description" class=" bg-gray-800 border-gray-300 w-full h-full">
+                        </textarea>
                     </div>
 
                     <div class="mb-8">
-                        <label class="text-xl text-gray-300">Description <span class="text-red-500">*</span></label></br>
-                        <textarea name="content" class="border-gray-100">
-                        </textarea>
+                        <label class="text-xl text-gray-300">Category<span class="text-red-500">*</span></label></br>
+
+                    <select class="bg-gray-800 border-gray-300 p-2 w-full">
+                        <option>Recommended</option>
+                        <option>Popular</option>
+                        <option>Drinks</option>
+                    </select>
+                    
                     </div>
+
+
+                    <div class="mb-8">
+                        <input type="file" name="file" id="file" class="sr-only" />
+                        <label
+                          for="file"
+                          class="relative flex min-h-[200px] items-center justify-center rounded-md border border-dashed border-[#e0e0e0] p-12 text-center"
+                        >
+                          <div>
+                            <span class="mb-2 block text-xl font-semibold ">
+                              Drop files here
+                            </span>
+                            <span class="mb-2 block text-base font-medium ">
+                              Or
+                            </span>
+                            <span
+                              class="inline-flex rounded border py-2 px-7 text-base font-medium "
+                            >
+                              Browse
+                            </span>
+                          </div>
+                        </label>
+                      </div>
+              
+
+
 
                     <div class="mb-4">
                        
@@ -31,12 +71,6 @@
         </div>
     </div>
 </div>
-
-<script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
-
-<script>
-    CKEDITOR.replace( 'content' );
-</script>
 
 
 <%- include ("./layout/footer") %>
