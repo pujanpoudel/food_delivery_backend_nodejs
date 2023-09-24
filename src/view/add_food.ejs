@@ -1,0 +1,42 @@
+<%- include ("./layout/header") %>
+<%- include ("./layout/sidebar") %>
+
+<div class="py-12">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="p-6 bg-gray-800 border-b border-gray-200">
+                <form method="POST" action="/admin/add_food">
+                    <div class="mb-4">
+                        <label class="text-xl text-gray-300">Title <span class="text-red-500">*</span></label></br>
+                        <input type="text" class="bg-gray-800 border-gray-300 p-2 w-full " name="title" id="title" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="text-xl text-gray-300">Price<span class="text-red-500">*</span></label></br>
+                        <input type="text" class="bg-gray-800 border-gray-300 p-2 w-full" name="description" id="description" required>
+                    </div>
+
+                    <div class="mb-8">
+                        <label class="text-xl text-gray-300">Description <span class="text-red-500">*</span></label></br>
+                        <textarea name="content" class="border-gray-100">
+                        </textarea>
+                    </div>
+
+                    <div class="mb-4">
+                       
+                        <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+
+<script>
+    CKEDITOR.replace( 'content' );
+</script>
+
+
+<%- include ("./layout/footer") %>
